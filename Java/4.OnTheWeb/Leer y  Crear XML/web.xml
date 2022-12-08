@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+    <display-name>SimpleServletProject</display-name>
+    <!-- display-name: le da el nombre al proyecto -->
+
+    <servlet>
+        <!-- servlet es la etiqueta que almacena el nombre y la clase de servlet que se utiliza -->
+        <servlet-name>simpleServlet</servlet-name>
+        <!-- servlet-name: estiqueta que almacena el nombre del servlet -->
+        <servlet-class>org.codingdojo.tutorial.SimpleServlet</servlet-class>
+        <!-- servlet-class: almacena la clase(fuente) del servlet que se esta invocando -->
+    </servlet>
+    
+    <servlet-mapping>
+        <!-- servlet-mapping: almacena los datos de la direccion del servlet -->
+        <servlet-name>simpleServlet</servlet-name>
+        <url-pattern>/simpleServlet</url-pattern>
+        <!-- url-pattern: etiqeuta que almacena la direccion url a la que lleva el mapping -->
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>xmlServlet</servlet-name>
+        <servlet-class>or.codingdojo.tutorial.XmlServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>xmlServlet</servlet-name>
+        <url-pattern>/xmlServletpath</url-pattern>
+    </servlet-mapping>
+    
+    <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <!-- welcome-file: etiqueta que almacena el archivo estatico con el que se visualiza la pagina -->
+    </welcome-file-list>
+</web-app>
