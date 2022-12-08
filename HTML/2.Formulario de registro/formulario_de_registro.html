@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+</head>
+<body>
+    <form>
+        <h1>Formulario de Registro</h1>
+        
+        <label>
+            Nombre:<input type="text" name="nombre">
+        </label>
+        <br>
+        <label>
+            Apellido<input type="text" name="apellido">
+        </label>
+        <br>
+        <label>
+            Email<input type="text" name="email">
+        </label>
+        <br>
+        <label>
+            Contraseña<input type="password" name="contraseña">
+        </label>
+        <br>
+        <label>
+            Confirmar<input type="password" name="confirmar">
+        </label>
+        <br>
+        <label>
+            Cumpleaños<input type="date" name="cumpleaños">
+        </label>
+        <br>
+        <h4>Seleccione su género</h4>
+        <label>
+            Masculino<input type="radio" name="masculino">
+        </label>
+        <label>
+            Femenino<input type="radio" name="femenino">
+        </label>
+        <label>
+            Otro<input type="radio" name="otro">
+        </label>
+        <h4>Una breve descripción de ti</h4>
+        <textarea name="descripcion"></textarea>
+        <br>
+        <p>Seleccione su lenguaje favorito</p>
+        <select name="lenguajefavorito">
+            <option value="javaScript">JavaScript</option>
+            <option value="python">Python</option>
+            <option value="css">CSS</option>
+        </select>
+        
+        <input type="submit" name="enviar">
+    </form>
+</body>
+</html>
