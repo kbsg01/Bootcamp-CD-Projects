@@ -1,0 +1,11 @@
+p {
+	color: blue;
+
+}
+#important {
+	font-size: 36px;
+}
+.info {
+	background-color: green;
+	border-top: 1px solid black;
+}

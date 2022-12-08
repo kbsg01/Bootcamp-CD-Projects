@@ -1,0 +1,27 @@
+p{
+	background-color: thistle;
+	display: inline;
+	padding: 5;
+}
+a{
+	background-color: rgb(45, 77, 165);
+	/* display: block */
+}
+ul{
+	background-color:rgb(85, 101, 137);
+	display: inline;
+	text-decoration-color: black;
+	text-transform: uppercase;
+}
+ul li{
+	background-color: rgb(90, 74, 172);
+	display: inline;
+	/* padding: 0px; */
+	font-style: italic;
+}
+#navbar{
+	list-style-type: none;
+}
+#navbar li{
+	display: inline-flex;
+}

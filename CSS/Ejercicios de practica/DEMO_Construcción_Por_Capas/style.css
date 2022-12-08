@@ -1,0 +1,55 @@
+/* body * {
+    outline: 1px solid rgb(255, 255, 255);
+} */
+
+div.container {
+    width: 980px;
+    min-height: 800px;
+    background-color: blue;
+    margin:0px auto;
+}
+    div.container div.top{
+        min-height: 100px;
+        background-color: red;
+    }
+        div.container div.top div.image{
+          width: 300px;
+          display: inline-block;  
+        }
+        div.container div.top ul{
+            display: inline-block;
+        }
+        div.container div.top ul li{
+            display: inline-block;
+            font-size: 24px;
+            padding: 10px;
+        }
+
+    div.container h1 {
+        text-align: center;
+    }
+    div.container div.bottom{
+        min-height: 400px;
+        background-color: rgb(0, 162, 255);
+    }
+    div.container div.message{
+        display: inline-block;
+        vertical-align: top;
+        width: 290px;
+        padding: 10px;
+        margin: 6px;
+        background-color: red;
+        min-height: 300px;
+        text-align: center;
+    }
+    div.container div.message div.image {
+        height: 80px;
+    }
+    div.container div.message a{
+        height: block;
+        background-color: orange;
+        padding: 10px;
+        border: 1px solid black;
+        color: white;
+        text-decoration: none;
+    }
