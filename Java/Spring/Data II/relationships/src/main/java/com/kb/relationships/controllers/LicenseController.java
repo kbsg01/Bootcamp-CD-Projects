@@ -16,6 +16,7 @@ import com.kb.relationships.models.License;
 import com.kb.relationships.models.Person;
 import com.kb.relationships.services.LicenseService;
 import com.kb.relationships.services.PersonService;
+
 @Controller
 @RequestMapping("/licenses")
 public class LicenseController {
