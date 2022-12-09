@@ -34,9 +34,7 @@ public class LicensesController {
     }
 
     @PostMapping("/licenses/new")
-    public String nlicence(@Valid @ModelAttribute("license")License license, BindingResult result, Model model){
-        System.out.println(license.getNumber());
-        System.out.println(license.getExpirationDate());
+    public String nlicence(@Valid @ModelAttribute("license")License license, BindingResult result){
         if(result.hasErrors()){
             return "licenses/new";
         } else {

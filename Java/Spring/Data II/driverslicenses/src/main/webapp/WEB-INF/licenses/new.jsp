@@ -25,6 +25,7 @@
         </p>
         <p>
             <form:label path="state">state</form:label>
+            <from:errors path="state"/>
             <form:input path="state"/>
         </p>
         <p>
