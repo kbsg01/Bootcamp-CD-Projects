@@ -52,6 +52,4 @@ public class Dojo {
 
     public Dojo() {
     }
-
-    
 }
