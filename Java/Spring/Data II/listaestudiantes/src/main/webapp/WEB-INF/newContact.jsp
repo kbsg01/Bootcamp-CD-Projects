@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 <!DOCTYPE html>
@@ -15,7 +16,7 @@
 </head>
 <body>
     <h1>New Contact Info</h1>
-    <from:form action="/contact/new" method="post" modelAttribute="contact">
+    <form:form action="/contact/new" method="post" modelAttribute="contact">
         <p>
             <form:label path="student">Student: </form:label>
             <form:select path="student">
@@ -24,25 +25,18 @@
                 </c:forEach>
             </form:select>
         </p>
-
         <p>
             <form:label path="address">Address: </form:label>
+            <form:errors path="address"/>
             <form:input path="address"/>
-            <from:errors path="address"/>
         </p>
-
         <p>
             <form:label path="city">City: </form:label>
-            <form:input path="city"/>
             <form:errors path="city"/>
+            <form:input path="city"/>
         </p>
 
-        <p>
-            <form:label path="state">State: </form:label>
-            <from:input path="state"/>
-            <form:errors path="state"/>
-        </p>
         <input type="submit" value="Create">
-    </from:form>
+    </form:form>
 </body>
 </html>

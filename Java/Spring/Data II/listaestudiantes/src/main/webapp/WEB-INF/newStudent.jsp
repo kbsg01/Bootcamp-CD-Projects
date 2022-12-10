@@ -15,26 +15,24 @@
 </head>
 <body>
     <h1>New Student</h1>
-    <from:form action="/students/new" method="post" modelAttribute="student">
+    <form:form action="/students/new" method="post" modelAttribute="student">
         <p>
-            <from:label path="firstName">First Name</from:label>
+            <form:label path="firstName">First Name: </form:label>
+            <form:errors path="firstName"/>
             <form:input path="firstName"/>
-            <from:errors path="firstName"/>
         </p>
-
         <p>
-            <form:label path="lastName">Last Name</form:label>
-            <form:input path="lastName"/>
+            <form:label path="lastName">Last Name: </form:label>
             <form:errors path="lastName"/>
+            <form:input path="lastName"/>
         </p>
-
         <p>
-            <form:label path="age">Age</form:label>
-            <form:input path="age"/>
+            <form:label path="age">Age: </form:label>
             <form:errors path="age"/>
+            <form:input path="age"/>
         </p>
 
         <input type="submit" value="Create">
-    </from:form>
+    </form:form>
 </body>
 </html>

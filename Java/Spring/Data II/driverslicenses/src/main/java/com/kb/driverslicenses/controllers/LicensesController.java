@@ -35,6 +35,7 @@ public class LicensesController {
 
     @PostMapping("/licenses/new")
     public String nlicence(@Valid @ModelAttribute("license")License license, BindingResult result){
+;
         if(result.hasErrors()){
             return "licenses/new";
         } else {

@@ -43,6 +43,7 @@ public class StudentController {
     @PostMapping("/students/new")
         public String createStudent(@Valid @ModelAttribute("student") Student student, BindingResult result, Model model){
             if (result.hasErrors()) {
+                System.out.println("por aqui si q no");
                 return "/students/new";
             } else {
                 studentService.createStudent(student);
