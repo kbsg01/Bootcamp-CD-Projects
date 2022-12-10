@@ -36,6 +36,12 @@
             <form:input path="city"/>
         </p>
 
+        <p>
+            <form:label path="state">State: </form:label>
+            <form:errors path="state"/>
+            <form:input path="state"/>
+        </p>
+
         <input type="submit" value="Create">
     </form:form>
 </body>
