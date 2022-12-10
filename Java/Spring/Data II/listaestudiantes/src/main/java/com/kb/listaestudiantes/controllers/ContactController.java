@@ -36,12 +36,9 @@ public class ContactController {
 
     @PostMapping("contact/new")
     public String addContact(@Valid @ModelAttribute("contact")Contact contact, BindingResult result){
-        System.out.println("por ak");
         if (result.hasErrors()) {
-            System.out.println("por aqui va");
             return "newContact";
         } else {
-            System.out.println("aber");
             contactService.createContact(contact);
             return "redirect:/students";
         }
