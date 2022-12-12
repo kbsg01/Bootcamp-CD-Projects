@@ -34,6 +34,12 @@ Dependencias del pom.xml
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
+		<!-- JBCrypt -->
+		<dependency>
+            	<groupId>org.mindrot</groupId>
+           		<artifactId>jbcrypt</artifactId>
+            	<version>0.4</version>
+        	</dependency>
 
 
 
@@ -46,11 +52,10 @@ spring.mvc.view.suffix=.jsp
 spring.mvc.hiddenmethod.filter.enabled=true
 
 #DataBase Conection
-spring.datasource.url=jdbc:mysql://localhost:3306/*Nombre ded la base de datos*
-spring.datasource.username=user
-spring.datasource.password=contra
+spring.datasource.url=jdbc:mysql://localhost:3306/*DBName*
+spring.datasource.username=root
+spring.datasource.password=root
 spring.jpa.hibernate.ddl-auto=update
-
 
 
 Primera linea de todos los archivos jsp (esto indica que se usara java en el archivo)
