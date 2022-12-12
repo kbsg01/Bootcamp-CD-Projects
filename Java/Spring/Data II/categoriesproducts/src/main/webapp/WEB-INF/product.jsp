@@ -17,13 +17,15 @@
     <div>
         <h2>Categories</h2>
         <div>
-            <c:forEach items="${catProds}" var="categories">
-                <ul>
-                    <li>
-                        <c:out value="${categories.getName()}"/>
-                    </li>
-                </ul>
-            </c:forEach>
+            <ul>
+                <c:forEach items="${prodCats}" var="category">
+
+                        <li>
+                            <c:out value="${category.getName()}"/>
+                        </li>
+                    
+                </c:forEach>
+            </ul>
         </div>
 
         <form action="/products/${product.getId()}/add" method="post">

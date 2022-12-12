@@ -17,7 +17,7 @@
     <div>
         <h2>Products</h2>
         <div>
-            <c:forEach items="${prodCat}" var="product">
+            <c:forEach items="${catProds}" var="product">
                 <ul>
                     <li>
                         <c:out value="${product.getName()}"/>
