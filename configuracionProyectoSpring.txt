@@ -52,7 +52,7 @@ spring.mvc.view.suffix=.jsp
 spring.mvc.hiddenmethod.filter.enabled=true
 
 #DataBase Conection
-spring.datasource.url=jdbc:mysql://localhost:3306/*DBName*
+spring.datasource.url=jdbc:mysql://localhost:3306/*DBName*?createDatabaseIfNotExist=true&&serverTimezone=UTC
 spring.datasource.username=root
 spring.datasource.password=root
 spring.jpa.hibernate.ddl-auto=update

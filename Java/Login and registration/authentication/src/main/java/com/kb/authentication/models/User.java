@@ -12,8 +12,6 @@ import javax.persistence.PreUpdate;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 import javax.validation.constraints.Email;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import org.springframework.format.annotation.DateTimeFormat;
@@ -29,11 +27,11 @@ public class User {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
-    @Email
-    @NotNull
-    @NotBlank
+
+    @Email(message="Email must be valid")
     private String email;
 
+    @Size(min=5, message="Password must be greater than 5 characters")
     private String password;
     @Transient
     private String passwordConfirmation;

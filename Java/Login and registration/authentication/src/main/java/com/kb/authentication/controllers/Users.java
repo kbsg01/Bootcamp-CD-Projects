@@ -13,14 +13,19 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.kb.authentication.models.User;
 import com.kb.authentication.services.UserService;
+import com.kb.authentication.validator.UserValidator;
 
 
 @Controller
 public class Users {
     private final UserService userService;
+    private final UserValidator userValidator;
 
-    public Users(UserService userService) {
+    
+
+    public Users(UserService userService, UserValidator userValidator) {
         this.userService = userService;
+        this.userValidator = userValidator;
     }
 
     @RequestMapping("/registration")
@@ -36,13 +41,14 @@ public class Users {
     @RequestMapping(value="/registration", method=RequestMethod.POST)
     public String registerUser(@Valid @ModelAttribute("user") User user, BindingResult result, HttpSession session) {
         //si el resultado tiene errores, retornar a la página de registro (no se preocupe por las validaciones por ahora)
+        userValidator.validate(user, result);
         if (result.hasErrors()) {
             return "registrationPage";
-        } else {
-            User u = userService.registerUser(user);
-            session.setAttribute("userId", u.getId());
-            return "redirect:/home";
-        }
+        } 
+        User u = userService.registerUser(user);
+        session.setAttribute("userId", u.getId());
+        return "redirect:/home";
+        
         //si no, guarde el usuario en la base de datos, guarde el id del usuario en el objeto Session y redirija a /home
     }
 
