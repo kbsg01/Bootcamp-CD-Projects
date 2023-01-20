@@ -29,7 +29,7 @@ public class PersonController {
         return "persons/new";
     }
 
-    @PostMapping("persons/new")
+    @PostMapping("/persons/new")
     public String nPerson(@ModelAttribute("person")Person person, BindingResult result){
         if (result.hasErrors()) {
             return "persons/new";
